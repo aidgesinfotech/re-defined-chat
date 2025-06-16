@@ -1,5 +1,14 @@
 const db = require('../config/db');
 
+exports.activateChatService = async (req, res) => {
+  try {
+    res.status(200).json({ message: 'Activated Chat Service' });
+  } catch (err) {
+    console.error('Error fetching messages:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
 exports.getMessagesBetweenMembers = async (req, res) => {
   const { senderId, receiverId } = req.params;
   const { beforeMessageId, limit = 15 } = req.query;
