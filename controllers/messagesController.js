@@ -2,6 +2,7 @@ const db = require('../config/db');
 
 exports.activateChatService = async (req, res) => {
   try {
+    console.log('Activated Chat Service');
     res.status(200).json({ message: 'Activated Chat Service' });
   } catch (err) {
     console.error('Error fetching messages:', err);
