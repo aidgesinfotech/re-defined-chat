@@ -3,11 +3,11 @@ const mysql = require('mysql2');
 
 // Create a connection pool
 const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    port: process.env.DB_PORT,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    host: 'srv1338.hstgr.io',
+    user: 'u895774783_relive',
+    port: 3306,
+    password: 'Redefined@1011',
+    database: 'u895774783_relive',
     waitForConnections: true,
     connectionLimit: 510,
     queueLimit: 0 
